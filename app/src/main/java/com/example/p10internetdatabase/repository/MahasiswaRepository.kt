@@ -12,7 +12,7 @@ interface MahasiswaRepository{
     suspend fun getMahasiswaById(nim: String): Mahasiswa
 }
 
-class NetworkMahasiswaRepository(mahasiswaService: MahasiswaService) : MahasiswaRepository{
+class NetworkMahasiswaRepository(private val mahasiswaApiService: MahasiswaService) : MahasiswaRepository{
     override suspend fun insertMahasiswa(mahasiswa: Mahasiswa) {
         mahasiswaApiService.insertMahasiswa(mahasiswa)
     }

@@ -22,11 +22,11 @@ interface MahasiswaService {
     suspend fun getMahasiswaById(@Query("nim")nim:String): Mahasiswa
 
     @POST("insertmahasiswa.php")
-    suspend fun insertMahasiswa(mahasiswa: Mahasiswa)
+    suspend fun insertMahasiswa(@Body mahasiswa: Mahasiswa)
 
     @PUT("updatetmahasiswa.php/{nim}")
     suspend fun updateMahasiswa(@Query("nim")nim:String, @Body mahasiswa: Mahasiswa)
 
-    @DELETE("updatetmahasiswa.php/{nim}")
+    @DELETE("deletemahasiswa.php/{nim}")
     suspend fun deleteMahasiswa(@Query("nim")nim:String): Response<Void>
 }
