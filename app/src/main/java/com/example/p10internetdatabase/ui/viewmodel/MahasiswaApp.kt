@@ -11,6 +11,7 @@ import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import com.example.p10internetdatabase.ui.navigation.PengelolaHalaman
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +26,7 @@ fun MahasiswaApp(){
                 .fillMaxSize()
                 .padding(it)
         ){
-            PengelolaHalaman
+            PengelolaHalaman()
         }
     }
 }
